@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --navy: #002772;
+    --pink: #FDE2FF;
+    --black: #1E1E1E;
+    --magenta: #720060;
+    --skyblue: #D6E6FF;
+    --dark-gray: #3F3F3F;
+    --gray: #DCDCDC;
+    --white: #FFFFFF
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    position: absolute;
+    z-index: 1;
+    top: -12%;
+    left: 0;
+    width: 100%;
+}
+.overlay > img {
+    width: 100%;
+    max-height: 60vh;
+}
+.card {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    min-height: 70vh;
+    /* height: 70vh; */
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 48px 32px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+
+
+.product-unavailable-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product-unavailable-container > .overlay {
+    top: 10%;
+    left: 5%;
+}
+.product-unavailable-container > .product-details {
+    text-align: center;
+    z-index: 2;
+}
+.product-unavailable-container .cta-next {
+    margin: 0px auto;
+    border: 2px solid black;
+    color: black;
+}
+
+.product-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 16px;
+    height: 100%;
+}
+.product-thumbnail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-thumbnail > img {
+    width: 80%;
+}
+.product-details {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-details .title {
+    font-size: 32px;
+    font-weight: 600;
+}
+.product-details .sub-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 14px;
+    font-size: 16px;
+    color: var(--dark-gray);
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray);
+}
+.product-details .rating {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+.rating > .circle {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+}
+.product-details .description {
+    width: 100%;
+    margin-top: 24px;
+    font-size: 18px;
+    color: var(--black);
+    /* padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray); */
+}
+.product-details > .bottom {
+    padding-top: 16px;
+    border-top: 1px solid var(--gray);
+}
+.product-details > .top {
+    padding-bottom: 50px;
+}
+
+.product-details .price {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+.cta {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}
+
+.cta > .cta-buy,
+.cta > .cta-next {
+    width: 50%;
+    height: 36px;
+    font-size: 16px;
+    border-radius: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cta > .cta-buy {
+    color: var(--white);
+    border: none;
+}
+.cta > .cta-next {
+    background-color: var(--white);
+}
+.bg-blue {
+    background: linear-gradient(180deg, var(--skyblue) 65%, var(--white) 50%);
+}
+.bg-pink {
+    background: linear-gradient(180deg, var(--pink) 65%, var(--white) 50%);
+}
+.bg-gray {
+    background: linear-gradient(180deg, var(--gray) 65%, var(--white) 50%);
+}
+.bg-white {
+    background-color: var(--white);
+}
+.bg-navy {
+    background-color: var(--navy);
+}
+.bg-magenta {
+    background-color: var(--magenta);
+}
+.ng-none {
+    background-color: none;
+}
+.border-navy {
+    border: 2px solid var(--navy);
+}
+.border-magenta {
+    border: 2px solid var(--magenta);
+}
+ .man{
+    border: 1px solid var(--navy);
+ }
+ .woman{
+    border: 1px solid var(--magenta);
+}
+
+.font-navy {
+    color: var(--navy);
+}
+.font-magenta {
+    color: var(--magenta);
+}
+
+
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 20%;
+        right: 45%;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
